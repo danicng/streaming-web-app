@@ -1,0 +1,22 @@
+<div class="container-fluid" style="margin-top: 5px;">
+    <div class="row">
+        {{#each myPostits}}
+        <div class="col-3">
+            <div class=" card-deck" style="width: 20rem;margin-top: 10px;">
+                <div class="card text-center">
+                    <h5 class="card-title">{{text}}</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{nameVideo}}</li>
+                        <li class="list-group-item">{{currentTime}} s</li>
+                        <div class="card-footer">
+                            <p><small class="text-muted">{{date}}</small></p>
+                        </div>
+                    </ul>
+                    <a class="btn btn-outline-dark col-12 btn-sm" href="/postit/delete/{{_id}}">Borrar</a>
+                    <a class="btn btn-sm border-dark col-12 bg-info" href="/postit/deleteAll">Borrar Todos</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
